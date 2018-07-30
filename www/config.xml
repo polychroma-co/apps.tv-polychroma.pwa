@@ -76,6 +76,10 @@
 
     <access origin="https://tv.polychroma.co/live/m/" />
         
+    <allow-navigation href="http://polychroma.co" />
+    <allow-navigation href="https://tv.polychroma.co" />
+    <allow-navigation href="https://youtube.com" />
+        
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
