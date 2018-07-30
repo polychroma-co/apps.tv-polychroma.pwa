@@ -16,21 +16,26 @@
         Polychroma Support
     </author>
 
-    <preference name="permissions"                value="none"/>
-    <preference name="orientation"                value="landscape" />
-    <preference name="target-device"              value="universal" />
-    <preference name="fullscreen"                 value="true" />
-    <preference name="webviewbounce"              value="false" />
-    <preference name="prerendered-icon"           value="true" />
-    <preference name="stay-in-webview"            value="false" />
-    <preference name="ios-statusbarstyle"         value="black-opaque" />
-    <preference name="detect-data-types"          value="false" />
-    <preference name="exit-on-suspend"            value="true" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen"    value="true" />
-    <preference name="disable-cursor"             value="false" />
-    <preference name="android-installLocation"    value="auto" />
-    <preference name="phonegap-version"           value="cli-6.5.0" />
+    <preference name="permissions"                      value="none"/>
+    <preference name="orientation"                      value="landscape" />
+    <preference name="target-device"                    value="universal" />
+    <preference name="fullscreen"                       value="true" />
+    <preference name="mediaplaybackrequiresuseraction"  value="false" />
+    <preference name="allowinlinemediaplayback"         value="true" />
+    <preference name="webviewbounce"                    value="false" />
+    <preference name="prerendered-icon"                 value="true" />
+    <preference name="stay-in-webview"                  value="false" />
+    <preference name="ios-statusbarstyle"               value="black-opaque" />
+    <preference name="detect-data-types"                value="false" />
+    <preference name="exit-on-suspend"                  value="true" />
+    <preference name="show-splash-screen-spinner"       value="true" />
+    <preference name="auto-hide-splash-screen"          value="true" />
+    <preference name="SplashScreenDelay"                value="5000" />
+    <preference name="FadeSplashScreenDuration"         value="2000"/>
+    <preference name="SplashScreenBackgroundColor"      value="green" />
+    <preference name="disable-cursor"                   value="false" />
+    <preference name="android-installLocation"          value="auto" />
+    <preference name="phonegap-version"                 value="cli-6.5.0" />
 
     <plugin name="cordova-plugin-android-tv" />
     <plugin name="cordova-plugin-battery-status" />
@@ -74,11 +79,11 @@
     <string>100</string>
     </gap:config-file>
 
-    <access origin="https://tv.polychroma.co/live/m/" />
+    <access origin="*" />
         
     <allow-navigation href="http://polychroma.co" />
     <allow-navigation href="https://tv.polychroma.co" />
-    <allow-navigation href="https://youtube.com" />
+    <allow-navigation href="https://*youtube.com/*"/>
         
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
