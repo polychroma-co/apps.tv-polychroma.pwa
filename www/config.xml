@@ -30,7 +30,7 @@
     <preference name="auto-hide-splash-screen"    value="true" />
     <preference name="disable-cursor"             value="false" />
     <preference name="android-installLocation"    value="auto" />
-    <preference name="phonegap-version"           value="3.5.0" />
+    <preference name="phonegap-version"           value="cli-6.5.0" />
 
     <plugin name="cordova-plugin-android-tv" />
     <plugin name="cordova-plugin-battery-status" />
