@@ -43,6 +43,7 @@
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-animated-splashscreen" />
         
     <icon src="icon.png" />
