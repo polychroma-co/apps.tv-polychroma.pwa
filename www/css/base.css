@@ -1,9 +1,14 @@
+html {
+    overflow: hidden;
+    width:100%;
+}
 body {
     margin: 0px;
-    background-color: black;
+    background-color: #000;
     background-image:url('../img/player.video-bg.gif');
     background-size:cover;
     height: 100%;
+    width:100%;
     overflow: hidden;
 }
 video {
