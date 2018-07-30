@@ -1,0 +1,247 @@
+body {
+    margin: 0px;
+    background-color: black;
+    background-image:url('../img/player.video-bg.gif');
+    background-size:cover;
+    height: 100%;
+    overflow: hidden;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+#container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#container > #menu {
+    order: 0;
+    flex: 0 1 48px;
+    color: white;
+    background-color: transparent;
+    background-image: url('../img/player.menu-bg.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:contain;
+    background-position:left bottom;
+    overflow: hidden;
+    z-index: 1;
+    opacity: .55;
+    transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+}
+#container > #menu:hover {
+	opacity: .95;
+}
+#menu.autohide {
+    flex-basis: 5px !important;
+}
+#menu.autohide:hover {
+    flex-basis: 48px !important;
+}
+
+#menu i {
+    font-size: 2em;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#container > *[id^=window-player] {
+    order: 1;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    flex: 1 1;
+}
+#container > #chat {
+    order: 2;
+    flex: 0 1 300px;
+    position: relative;
+    transition: flex-basis 1s;
+}
+#container > #chat.closed {
+    flex-basis: 0px;
+}
+#container > #chat iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+#openGuide {
+    position: absolute;
+    height: 20px;
+    z-index: 1;
+    color: rgba(255,255,255,0.3);
+}
+#openGuide:hover {
+    color: rgba(255,255,255,0.95);
+}
+
+#rtvGuide {
+    z-index: 2;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0 15px 10px 15px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+#rtvGuideSub { position: relative; overflow-y: auto; height: 100%; background-color:rgba(0,0,0,0.7); }
+
+#rtvChannels {width: 200px; */z-index:3;background-image: url('../img/epg/guide.channel-overlay.png');background-size: contain;box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.25);background-color: rgba(24,24,24,1);text-indent:-9999;}
+#rtvChannels, #rtvShows {display: inline-block;vertical-align: top;}
+.channel, #rtvShows > .row {height: 50px;line-height: 4em;border-top: 1px solid rgba(82,82,82,0.55);text-transform: capitalize;}
+.channel:hover:not(:first-child) {
+    background-color: rgba(255,255,255,0.3);
+}
+.currentStream {
+    background-color: rgba(120,150,150,.25);
+}
+#rtvShows {
+    position: absolute;
+    right: 0px;
+    left: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#rtvShows > .row {background: rgba(82,82,82,0.5);}
+#rtvShows > .sparksLinerHigh {
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    background: rgba(20, 200, 130, 0.45);
+    height: 100%;
+}
+.show {
+    display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(82,82,82,0.55);
+    overflow: hidden;
+    font-size: 0.9em;
+    text-overflow: ellipsis;
+    cursor: default;
+    text-indent: 0.5em;
+    font-weight: 300;
+    transition: all .3s ease-in-out;
+}
+.show:hover {
+    background: rgba(20,200,130,.4);
+}
+
+.row.marker .show:last-child, .show.playlistEnd:last-child {border-right: 1px solid rgba(82,82,82,0.55);}
+.show.abruptStart { }
+.show.gap {
+    background: rgba(82,82,82,0.3);
+    padding: 0px;
+    border: 0px;
+}
+
+.channel.marker, .row.marker {height: 35px !important;}
+.row.marker .show { border-top: none !important; }
+
+.pointer {cursor: pointer;padding: 0 0 0 12px;text-transform: uppercase;font-size: 10px;font-weight: 600;transition: all .3s ease-in-out;}
+.guideHead {
+    background-color: rgba(82,82,82,0.95);
+    box-shadow: inset 20px 0px 20px 20px rgba(0,0,0,.25);
+    text-align: right;
+    font-weight: 350;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.guideHead span {
+    display: inline-block;
+    padding: 6px 12px 6px 10;
+    color: #FFF;
+}
+.guideHead span:hover {
+    color: rgba(20,200,130,1);
+}
+
+#customizeChannels { width: 100%; }
+#customizeChannels table { width: 100%; }
+#customizeChannels tr.header {
+    text-align: center;
+    font-weight: bold;
+}
+#customizeChannels td {
+    vertical-align: top;
+}
+#customizeChannels select#chanAvail, #customizeChannels select#chanYours {
+    width: 100%;
+    min-width: 20%;
+    max-width: 100%;
+    height: 150px;
+}
+
+.dialog-customizePlaylists .ui-dialog-buttonset {
+    width: 100%;
+    text-align: right;
+}
+
+.dialog-customizePlaylists .ui-dialog-buttonset button.customPlaylists {
+    float: left;
+}
+
+table#customsManager {
+    width: 100%;
+}
+#customsManager .customsSelect {
+    width: 15%;
+}
+
+#customsManager select, #customsManager textarea {
+    width: 100%;
+    height: 100%;
+}
+
+p.depress {
+    background-color: #dedede;
+    border-radius: 4px;
+    margin: initial 0px;
+    padding: 5px;
+    font-size: small;
+}
+
+/* Share */
+.dialog-shareChannel .ui-dialog-content {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+}
+.dialog-shareChannel input {
+    width: 400px;
+    border-radius: 4px;
+    border-style: solid;
+    padding: 10px;
+    margin: 1.5em 0em;
+    font-size: 1.2em;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+.dialog-shareChannel input:hover {
+    background-color: #eaeaea;
+}
+@media (min-aspect-ratio: 16/9) {
+  #container > *[id^=window-player] { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  #container > *[id^=window-player] { width: 300%; left: -100%; }
+}
