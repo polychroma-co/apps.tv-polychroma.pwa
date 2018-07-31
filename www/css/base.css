@@ -1,10 +1,20 @@
 html {
     overflow: hidden;
     width:100%;
+    
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 body {
     margin: 0px;
-    background-color: #000;
+    background-color: black;
     background-image:url('../img/player.video-bg.gif');
     background-size:cover;
     height: 100%;
@@ -14,6 +24,7 @@ body {
 video {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 #container {
     display: flex;
@@ -87,7 +98,7 @@ video {
     color: rgba(255,255,255,0.3);
 }
 #openGuide:hover {
-    color: rgba(255,255,255,0.95);
+    color: rgba(255,255,255,0.8);
 }
 
 #rtvGuide {
@@ -136,14 +147,15 @@ video {
 .show {
     display: inline-block;
     height: 100%;
+    padding: 3px;
     box-sizing: border-box;
     border-right: 1px solid rgba(82,82,82,0.55);
     overflow: hidden;
-    font-size: 0.9em;
+    font-size: 0.86em;
     text-overflow: ellipsis;
     cursor: default;
     text-indent: 0.5em;
-    font-weight: 300;
+    font-weight: 500;
     transition: all .3s ease-in-out;
 }
 .show:hover {
