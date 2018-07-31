@@ -28,11 +28,10 @@
     <preference name="ios-statusbarstyle"               value="black-opaque" />
     <preference name="detect-data-types"                value="false" />
     <preference name="exit-on-suspend"                  value="true" />
-    <preference name="show-splash-screen-spinner"       value="true" />
+    <preference name="show-splash-screen-spinner"       value="false" />
     <preference name="auto-hide-splash-screen"          value="true" />
     <preference name="SplashScreenDelay"                value="5000" />
     <preference name="FadeSplashScreenDuration"         value="2000"/>
-    <preference name="SplashScreenBackgroundColor"      value="green" />
     <preference name="disable-cursor"                   value="false" />
     <preference name="android-installLocation"          value="auto" />
     <preference name="phonegap-version"                 value="cli-6.5.0" />
@@ -41,14 +40,15 @@
     <plugin name="cordova-plugin-battery-status" />
     <plugin name="cordova-plugin-console" />
     <plugin name="cordova-plugin-device" />
-    <plugin name="cordova-plugin-device-motion" />
     <plugin name="cordova-plugin-device-orientation" />
     <plugin name="cordova-plugin-dialogs" />
     <plugin name="cordova-plugin-file" />
-    <plugin name="cordova-plugin-globalization" />
+    <plugin name="cordova-plugin-fire-tv" />
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
+        
+    <plugin name="amazon-launcher-integration-cordova-plugin" />
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
