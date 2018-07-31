@@ -14,7 +14,7 @@ html {
 }
 body {
     margin: 0px;
-    background-color: black;
+    background-color: #000;
     background-image:url('../img/player.video-bg.gif');
     background-size:cover;
     height: 100%;
@@ -98,7 +98,7 @@ video {
     color: rgba(255,255,255,0.3);
 }
 #openGuide:hover {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.95);
 }
 
 #rtvGuide {
